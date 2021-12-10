@@ -7,39 +7,56 @@
     <title>Интернет-магазин Device</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header container">
       <a href="./index.html" class="header-logo">
         <img src="./img/logo.svg" width="163" height="35" alt="logo: device" />
       </a>
-      <section>
-        <div>
-          <form>
-            <button>
-              <img src="./img/icon_search.svg" alt="searsh" />
-            </button>
-            <input type="search" name="" id="" placeholder="Поиск по сайту" />
-            <button>Найти</button>
+      <section class="header-menu">
+        <div class="header-topline">
+          <form class="search-form">
+            <input
+              class="search-input"
+              type="search"
+              name="search-input"
+              id="search"
+              placeholder="Поиск по сайту"
+            />
+            <button class="found-btn">Найти</button>
           </form>
-          <ul>
-            <li>
-              <a href="#">Войти</a>
+          <ul class="topline-list">
+            <li class="topline-item">
+              <a class="login" href="#">Войти</a>
             </li>
-            <li>
-              <a href="#">Сравнить</a>
+            <li class="topline-item">
+              <a class="compaire" href="#">Сравнить</a>
             </li>
-            <li>
-              <a href="#">Корзина</a>
+            <li class="topline-item">
+              <a class="cart" href="#">Корзина</a>
             </li>
           </ul>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#">каталог товаров</a></li>
-            <li><a href="#">доставка</a></li>
-            <li><a href="#">гарантия</a></li>
-            <li><a href="#">контакты</a></li>
+        <nav class="header-navigation">
+          <ul class="header-navigation-list">
+            <li class="header-navigation-item">
+              <a class="catalog" href="#">каталог товаров</a>
+            </li>
+            <li class="header-navigation-item">
+              <a class="delivery" href="#">доставка</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#">гарантия</a>
+            </li>
+            <li class="header-navigation-item">
+              <a class="contacts" href="#">контакты</a>
+            </li>
           </ul>
         </nav>
       </section>

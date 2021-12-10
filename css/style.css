@@ -1,0 +1,271 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+@font-face {
+  font-family: "Gilroy Regular";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url("./../fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("./../fonts/Gilroy-Regular.woff") format("woff"),
+    url("./../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy Light";
+  src: local("Gilroy Light"), local("Gilroy-Light"),
+    url("./../fonts/Gilroy-Light.woff2") format("woff2"),
+    url("./../fonts/Gilroy-Light.woff") format("woff"),
+    url("./../fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy Extrabold";
+  src: local("Gilroy Extrabold"), local("Gilroy-Extrabold"),
+    url("./../fonts/Gilroy-Extrabold.woff2") format("woff2"),
+    url("./../fonts/Gilroy-Extrabold.woff") format("woff"),
+    url("./../fonts/Gilroy-Extrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Regular"), local("Poppins-Regular"),
+    url("./../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("./../fonts/Poppins-Regular.woff") format("woff"),
+    url("./../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.main-header {
+  position: relative;
+  background-color: #f7e296;
+  margin-top: 40px;
+  padding-top: 44px;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  height: 300px;
+}
+
+.header-logo {
+  width: 163px;
+  height: 35px;
+  position: absolute;
+  top: -7%;
+  left: 5%;
+}
+
+.header-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-form {
+  margin-right: 265px;
+  display: flex;
+  position: relative;
+}
+
+.search-form::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 16px;
+  left: 0;
+  background-image: url("./../img/icon_search.svg");
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-bottom: 2px solid transparent;
+  width: 100%;
+  padding-left: 24px;
+}
+
+.search-input::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-input:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-input:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
+}
+
+.search-input:focus + .found-btn {
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.found-btn {
+  border: 2px solid #000000;
+  background: transparent;
+  padding-left: 17px;
+  padding-right: 17px;
+  width: 84px;
+  height: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.found-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.found-btn:active {
+  background: #000;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.topline-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.topline-item a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  position: relative;
+  cursor: pointer;
+}
+
+.topline-item a:hover {
+  opacity: 0.6;
+}
+
+.topline-item a:active {
+  opacity: 0.3;
+}
+
+.topline-item:not(:last-child) {
+  margin-right: 63px;
+}
+
+.topline-item:first-child {
+  margin-right: 239px;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 14px;
+  background-image: url("./../img/icon_user.svg");
+  left: -25px;
+  top: 4px;
+}
+
+.compaire::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-image: url("./../img/icon_chart.svg");
+  left: -25px;
+  top: 4px;
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-image: url("./../img/icon_cart.svg");
+  left: -25px;
+  top: 4px;
+}
+
+.header-navigation {
+  margin-top: 50px;
+}
+
+.header-navigation-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-navigation-item {
+  padding: 0;
+}
+
+.header-navigation-item a {
+  text-decoration: none;
+  font-family: "Gilroy Extrabold", sans-serif;
+
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.catalog {
+  margin-right: 322px;
+  position: relative;
+}
+
+.catalog::after {
+  content: "";
+  position: absolute;
+  background: url("./../img/icon_plus.svg");
+  width: 22px;
+  height: 22px;
+  right: -38px;
+  bottom: 1px;
+}
+
+.delivery {
+  margin-right: 38px;
+}
+
+.contacts {
+  margin-left: 98px;
+}

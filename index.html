@@ -61,26 +61,30 @@
         </nav>
       </section>
     </header>
-    <section>
-      <img src="./img/slider-1.png" alt="quadcopter" />
-      <h2>Порхает как бабочка, жалит как пчела!</h2>
-      <p>
-        Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
-        замаскированным под стандартную камеру.
-      </p>
-      <a href="#">Подробнее</a>
-      <div>
-        <button></button>
-        <button></button>
-        <button></button>
+    <section class="main-slider first-slide container">
+      <div class="slider-image">
+        <img src="./img/slider-1.png" alt="quadcopter" />
       </div>
-      <div>
-        <ul>
-          <li>
+      <div class="slider-information">
+        <h2 class="slider-title">Порхает как бабочка, жалит как пчела!</h2>
+        <p class="slider-description">
+          Этот обычный, на первый взгляд, квадрокоптер оснащен
+          мощным&nbsp;лазером, замаскированным под стандартную камеру.
+        </p>
+        <div class="header-buttons">
+          <a class="more-button" href="#">Подробнее</a>
+          <div class="slider-buttons-group">
+            <button class="slider-button active-button"></button>
+            <button class="slider-button"></button>
+            <button class="slider-button"></button>
+          </div>
+        </div>
+        <ul class="benefits-list">
+          <li class="benefits-item">
             <strong>800 м</strong>
             <span>Дальность полета</span>
           </li>
-          <li>
+          <li class="benefits-item">
             <strong>50 м</strong>
             <span>Радиус поражения</span>
           </li>
@@ -88,81 +92,139 @@
       </div>
     </section>
     <main>
-      <section>
-        <ul>
-          <li>
-            <img src="./img/popular-1.svg" alt="VR" />
-            <span>Виртуальная реальность</span>
+      <section class="products container">
+        <ul class="products-list">
+          <li class="products-item">
+            <a class="product-link" href="./catalog.html"
+              ><div class="image-wrapper">
+                <img
+                  src="./img/popular-1.svg"
+                  alt="VR"
+                  width="97"
+                  height="55"
+                />
+              </div>
+              <span class="products-title">Виртуальная реальность</span>
+            </a>
           </li>
-          <li>
-            <img src="./img/popular-2.svg" alt="monopods" />
-            <span>Моноподы для селфи</span>
+          <li class="products-item">
+            <a class="product-link" href="./catalog.html"
+              ><div class="image-wrapper">
+                <img
+                  src="./img/popular-2.svg"
+                  alt="monopods"
+                  width="86"
+                  height="117"
+                />
+              </div>
+
+              <span class="products-title">Моноподы для&nbsp;селфи</span>
+            </a>
           </li>
-          <li>
-            <img src="./img/popular-3.svg" alt="cameras" />
-            <span>Экшн-камеры</span>
+          <li class="products-item">
+            <a class="product-link" href="./catalog.html"
+              ><div class="image-wrapper">
+                <img
+                  src="./img/popular-3.svg"
+                  alt="cameras"
+                  width="71"
+                  height="87"
+                />
+              </div>
+
+              <span class="products-title">Экшн-камеры</span>
+            </a>
           </li>
-          <li>
-            <img src="./img/popular-4.svg" alt="bracelets" />
-            <span>Фитнес-браслеты</span>
+          <li class="products-item">
+            <a class="product-link" href="./catalog.html"
+              ><div class="image-wrapper">
+                <img
+                  src="./img/popular-4.svg"
+                  alt="bracelets"
+                  width="107"
+                  height="65"
+                />
+              </div>
+              <span class="products-title">Фитнес-браслеты</span>
+            </a>
           </li>
-          <li>
-            <img src="./img/popular-5.svg" alt="watch" />
-            <span>Умные часы</span>
+          <li class="products-item">
+            <a class="product-link" href="./catalog.html"
+              ><div class="image-wrapper">
+                <img
+                  src="./img/popular-5.svg"
+                  alt="watch"
+                  width="56"
+                  height="98"
+                />
+              </div>
+              <span class="products-title">Умные часы</span>
+            </a>
           </li>
-          <li>
-            <img src="./img/popular-6.svg" alt="quadcopters" />
-            <span>Квадрокоптеры</span>
+          <li class="products-item">
+            <a class="product-link" href="./catalog.html"
+              ><div class="image-wrapper">
+                <img
+                  src="./img/popular-6.svg"
+                  alt="quadcopters"
+                  width="132"
+                  height="69"
+                />
+              </div>
+              <span class="products-title">Квадрокоптеры</span>
+            </a>
           </li>
         </ul>
       </section>
-      <section>
-        <div>
-          <ul>
-            <li>доставка</li>
-            <li>гарантия</li>
-            <li>кредит</li>
-          </ul>
-          <div>
-            <h3>Доставка</h3>
-            <p>
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-              совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на
-              ваш этаж.
-            </p>
+      <section class="offers">
+        <div class="offers-wrapper container">
+          <div class="offers-slide delivery-offer">
+            <ul class="offers-list">
+              <li class="offers-item active-offer"><a href="#">доставка</a></li>
+              <li class="offers-item"><a href="#">гарантия</a></li>
+              <li class="offers-item"><a href="#">кредит</a></li>
+            </ul>
+            <div class="offer-description">
+              <h3 class="offers-title">Доставка</h3>
+              <p class="offers-subtitle">
+                Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
+                на ваш этаж.
+              </p>
+            </div>
+            <img class="offers-image" src="./img/delivery.svg" alt="delivery" />
           </div>
-          <img src="./img/delivery.svg" alt="delivery" />
-        </div>
-        <div style="display: none">
-          <ul>
-            <li>доставка</li>
-            <li>гарантия</li>
-            <li>кредит</li>
-          </ul>
-          <div>
-            <h3>Гарантия</h3>
-            <p>
-              Если из-за возгорания купленного у нас товара у вас сгорит дом —
-              не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-            </p>
+          <div style="display: none">
+            <ul>
+              <li>доставка</li>
+              <li>гарантия</li>
+              <li>кредит</li>
+            </ul>
+            <div>
+              <h3>Гарантия</h3>
+              <p>
+                Если из-за возгорания купленного у нас товара у вас сгорит дом —
+                не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+              </p>
+            </div>
+            <img src="./img/warranty.svg" alt="warranty" />
           </div>
-          <img src="./img/warranty.svg" alt="warranty" />
-        </div>
-        <div style="display: none">
-          <ul>
-            <li>доставка</li>
-            <li>гарантия</li>
-            <li>кредит</li>
-          </ul>
-          <div>
-            <h3>Кредит</h3>
-            <p>
-              Залезть в долговую яму стало проще! Кредитные консультанты
-              подберут для вас наиболее выгодные условия кредита. Выгодные для
-              нашего банка, разумеется.
-            </p>
+          <div style="display: none">
+            <ul>
+              <li>доставка</li>
+              <li>гарантия</li>
+              <li>кредит</li>
+            </ul>
+            <div>
+              <h3>Кредит</h3>
+              <p>
+                Залезть в долговую яму стало проще! Кредитные консультанты
+                подберут для вас наиболее выгодные условия кредита. Выгодные для
+                нашего банка, разумеется.
+              </p>
+            </div>
+            <img src="./img/credit.svg" alt="credit" />
           </div>
-          <img src="./img/credit.svg" alt="credit" />
         </div>
       </section>
       <section>

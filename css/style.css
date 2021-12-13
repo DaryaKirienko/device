@@ -219,7 +219,7 @@ body {
 }
 
 .header-navigation {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .header-navigation-list {
@@ -247,6 +247,14 @@ body {
   color: #000000;
 }
 
+.header-navigation-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-navigation-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .catalog {
   margin-right: 322px;
   position: relative;
@@ -268,4 +276,242 @@ body {
 
 .contacts {
   margin-left: 98px;
+}
+
+.main-slider {
+  display: flex;
+  position: relative;
+  top: -46px;
+  justify-content: space-between;
+  padding-bottom: 96px;
+}
+
+.slider-image {
+  margin-left: 29px;
+}
+
+.slider-information {
+  margin-right: 65px;
+  max-width: 495px;
+  padding-top: 9px;
+}
+
+.slider-title {
+  margin: 0;
+  font-family: "Gilroy Extrabold", sans-serif;
+  font-size: 47px;
+  line-height: 58px;
+
+  color: #000000;
+}
+
+.slider-description {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  width: 472px;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.more-button {
+  width: 220px;
+  height: 40px;
+  font-family: "Gilroy Extrabold", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.more-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: #f0c52e;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+.more-button:hover::before {
+  transform: translateY(-50%);
+  height: 100%;
+  transition: height 0.3s;
+}
+
+.more-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-buttons-group {
+  width: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-button {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-color: transparent;
+  background-image: url("./../img/slider-button-empty.svg");
+  cursor: pointer;
+}
+
+.slider-button.active-button {
+  background-image: url("./../img/slider-button.svg");
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.benefits-item:not(:last-child) {
+  margin-right: 64px;
+}
+
+.benefits-item strong {
+  display: block;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.benefits-item span {
+  font-family: "Gilroy Light", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.products {
+  margin-bottom: 164px;
+}
+
+.products-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7e296;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 38px;
+  cursor: pointer;
+}
+
+.image-wrapper:hover {
+  background-color: #f0c52e;
+}
+
+.image-wrapper:active img,
+.image-wrapper:active + .products-title {
+  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.product-link {
+  text-decoration: none;
+}
+.products-title {
+  font-family: "Gilroy Extrabold", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: #000000;
+  max-width: 158px;
+  display: block;
+}
+
+.offers {
+  height: 288px;
+  background-color: #e5e5e5;
+}
+
+.offers-slide {
+  display: flex;
+}
+
+.offers-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.offers-item a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Gilroy Extrabold", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+  width: 160px;
+  display: block;
+  text-align: center;
+  margin-left: 24px;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+
+.offers-item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: #f0c52e;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+.offers-item:hover::before {
+  transform: translateY(-50%);
+  height: 100%;
+  transition: height 0.3s;
 }

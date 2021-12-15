@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин Device</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script/modal.js" defer></script>
+    <script src="./script/services_menu.js" defer></script>
+    <script src="./script/slider.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header catalog-header container">
+      <a href="./index.html" class="header-logo">
+        <img src="./img/logo.svg" width="163" height="35" alt="logo: device" />
+      </a>
+      <section class="header-menu">
+        <div class="header-topline">
+          <form class="search-form">
+            <input
+              class="search-input"
+              type="search"
+              name="search-input"
+              id="search"
+              placeholder="Поиск по сайту"
+            />
+            <button class="found-btn">Найти</button>
+          </form>
+          <ul class="topline-list">
+            <li class="topline-item">
+              <a class="login" href="#">Войти</a>
+            </li>
+            <li class="topline-item">
+              <a class="compaire" href="#">Сравнить</a>
+            </li>
+            <li class="topline-item">
+              <a class="cart" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <nav class="header-navigation">
+          <ul class="header-navigation-list">
+            <li class="header-navigation-item">
+              <a class="catalog" href="#">каталог товаров</a>
+              <div class="catalog-menu">
+                <ul class="catalog-list catalog-col-2">
+                  <li class="catalog-item">
+                    <a href="#"> Виртуальная реальность</a>
+                  </li>
+                  <li class="catalog-item">
+                    <a href="./catalog.html">Моноподы для селфи</a>
+                  </li>
+                  <li class="catalog-item"><a href="#">Экшн-камеры</a></li>
+                </ul>
+                <ul class="catalog-list catalog-col-2">
+                  <li class="catalog-item"><a href="#">Фитнес-браслеты</a></li>
+                  <li class="catalog-item"><a href="#">Умные часы</a></li>
+                </ul>
+                <ul class="catalog-list catalog-col-2">
+                  <li class="catalog-item"><a href="#">Квадрокоптер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-navigation-item">
+              <a class="delivery" href="#">доставка</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#">гарантия</a>
+            </li>
+            <li class="header-navigation-item">
+              <a class="contacts" href="#">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section class="container page-navigation">
+        <h2 class="page-heading">Моноподы для селфи</h2>
+        <ul class="page-nav-menu">
+          <li class="page-nav-item"><a href="./index.html">Главная</a></li>
+          <li class="page-nav-item"><a href="#">Каталог товаров</a></li>
+          <li class="page-nav-item">
+            <a href="./catalog.html">Моноподы для селфи</a>
+          </li>
+        </ul>
+      </section>
+      <section class="sorting-cols">
+        <div class="filters-wrapper container">
+          <h4 class="filters-title title-col">фильтр:</h4>
+          <div class="sorting-menu">
+            <h4 class="filters-title">сортировка:</h4>
+            <ul class="sorting-list">
+              <li class="sorting-item sorting-item-active">
+                <a href="#"> По цене </a>
+              </li>
+              <li class="sorting-item"><a href="#"> По типу </a></li>
+              <li class="sorting-item"><a href="#">По популярности</a></li>
+            </ul>
+          </div>
+          <div class="sorting-buttons">
+            <button class="sorting-btn button-up"></button>
+            <button class="sorting-btn button-down sorting-btn-active"></button>
+          </div>
+        </div>
+      </section>
+      <section class="filters">
+        <div class="filter-container container">
+          <div class="filters-col">
+            <form action="#">
+              <hr />
+              <fieldset>
+                <legend class="form-legend">Стоимость</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label for="min-price" class="label-price min-price">
+                      от</label
+                    >
+                    <input
+                      class="range-input"
+                      type="number"
+                      name="min-price"
+                      id="min-price"
+                      value="0"
+                    />
+
+                    <label for="max-price" class="label-price max-price">
+                      до
+                    </label>
+                    <input
+                      class="range-input"
+                      type="number"
+                      name="max-price"
+                      id="max-price"
+                      value="5000"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+              <hr />
+              <fieldset>
+                <legend class="form-legend">Цвет</legend>
+                <ul class="checkbox-list">
+                  <li class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="form-input checkbox-input"
+                      name="black"
+                      id="checkbox-black"
+                      checked
+                    />
+                    <label
+                      for="checkbox-black"
+                      class="form-label checkbox-label"
+                      >Чёрный</label
+                    >
+                  </li>
+                  <li class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="form-input checkbox-input"
+                      name="white"
+                      id="checkbox-white"
+                    />
+                    <label
+                      for="checkbox-white"
+                      class="form-label checkbox-label"
+                      >Белый</label
+                    >
+                  </li>
+                  <li class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="form-input checkbox-input"
+                      name="blue"
+                      id="checkbox-blue"
+                      checked
+                    />
+                    <label for="checkbox-blue" class="form-label checkbox-label"
+                      >Синий</label
+                    >
+                  </li>
+                  <li class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="form-input checkbox-input"
+                      name="red"
+                      id="checkbox-red"
+                      checked
+                    />
+                    <label for="checkbox-red" class="form-label checkbox-label"
+                      >Красный</label
+                    >
+                  </li>
+                  <li class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="form-input checkbox-input"
+                      name="pink"
+                      id="checkbox-pink"
+                    />
+                    <label for="checkbox-pink" class="form-label checkbox-label"
+                      >Розовый</label
+                    >
+                  </li>
+                </ul>
+              </fieldset>
+              <hr />
+              <fieldset>
+                <legend class="form-legend">Bluetooth</legend>
+                <ul class="radio-list">
+                  <li class="radio-item">
+                    <input
+                      type="radio"
+                      class="form-input radio-input"
+                      id="yes"
+                      name="bluetooth"
+                      checked
+                    />
+                    <label for="yes" class="form-label radio-label">Есть</label>
+                  </li>
+                  <li class="radio-item">
+                    <input
+                      type="radio"
+                      class="form-input radio-input"
+                      id="no"
+                      name="bluetooth"
+                    />
+                    <label for="no" class="form-label radio-label">Нет</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="more-button show-button" type="submit">
+                Показать
+              </button>
+            </form>
+          </div>
+          <div class="results-col"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <ul class="footer-list">
+          <li class="footer-item footer-login"><a href="#">Войти</a></li>
+          <li class="footer-item footer-chart"><a href="#">Сравнить</a></li>
+          <li class="footer-item footer-cart"><a href="#">Корзина</a></li>
+        </ul>
+        <a class="footer-logo" href="./index.html"
+          ><img src="./img/logo-footer.svg" alt="device"
+        /></a>
+        <div class="footer-menu">
+          <span class="footer-address"
+            >Санкт-Петербург, набережная реки Карповки, 5, литера П.</span
+          >
+          <nav class="footer-navigation">
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item">
+                <a href="#">доставка</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="#">гарантия</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="#">контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <span class="footer-contacts"
+            >Тел.: <a href="tel:+78005558628">+7 800 555-86-28</a></span
+          >
+        </div>
+        <div class="footer-underline">
+          <div class="footer-line"></div>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <img src="./img/icon_facebook.svg" alt="fb" />
+            </li>
+            <li class="footer-social-item">
+              <img src="./img/icon_instagram.svg" alt="insta" />
+            </li>
+            <li class="footer-social-item">
+              <img src="./img/icon_twitter.svg" alt="twitter" />
+            </li>
+          </ul>
+          <a href="#">
+            <img
+              class="footer-copyright"
+              src="./img/logo_htmlacademy.svg"
+              alt="htmlacademy.ru"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

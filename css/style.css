@@ -44,11 +44,16 @@ font-family: 'Roboto', sans-serif; */
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .container {
   width: 1160px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .main-header {
@@ -60,6 +65,10 @@ body {
   padding-right: 60px;
   box-sizing: border-box;
   height: 300px;
+}
+
+.main-header.catalog-header {
+  height: 206px;
 }
 
 .header-logo {
@@ -260,6 +269,7 @@ body {
   position: relative;
 }
 
+.catalog-menu:hover,
 .catalog:hover + .catalog-menu,
 .catalog:focus + .catalog-menu,
 .catalog:active + .catalog-menu {
@@ -321,16 +331,34 @@ body {
   margin-left: 98px;
 }
 
+.slider {
+  position: relative;
+}
+
 .main-slider {
-  display: flex;
+  display: none;
   position: relative;
   top: -46px;
   justify-content: space-between;
-  padding-bottom: 96px;
+  padding-bottom: 76px;
+}
+
+.main-slider.active-slide {
+  display: flex;
 }
 
 .slider-image {
-  margin-left: 29px;
+  margin-left: 88px;
+}
+
+.first-slide-img {
+  position: relative;
+  left: -59px;
+}
+
+.third-slide-img {
+  position: relative;
+  top: -60px;
 }
 
 .slider-information {
@@ -344,7 +372,7 @@ body {
   font-family: "Gilroy Extrabold", sans-serif;
   font-size: 47px;
   line-height: 58px;
-
+  width: 495px;
   color: #000000;
 }
 
@@ -410,6 +438,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  right: 87px;
+  top: 224px;
 }
 
 .slider-button {
@@ -466,6 +497,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 .image-wrapper {
@@ -510,12 +542,8 @@ body {
 }
 
 .offers-slide {
-  display: none;
-  justify-content: space-between;
-}
-
-.offers-slide.offer-active {
   display: flex;
+  justify-content: space-between;
 }
 
 .offers-list {
@@ -590,10 +618,30 @@ body {
   transition: height 1s;
 }
 
+.offer-block {
+  display: none;
+  justify-content: space-between;
+}
+
+.offer-block.offer-active {
+  display: flex;
+  animation-name: serv-menu;
+  animation-duration: 0.5s;
+}
+
 .offer-description {
   position: relative;
   top: -31px;
   margin-right: 127px;
+}
+
+@keyframes serv-menu {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .offer-description .offers-title {
@@ -948,6 +996,17 @@ body {
 .modal-write-us.modal-active,
 .modal-map.modal-active {
   display: block;
+  animation-name: modal-show;
+  animation-duration: 0.5s;
+}
+
+@keyframes modal-show {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .close-button {
@@ -1054,4 +1113,374 @@ body {
   z-index: 10;
   background-color: #fff;
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Catalog page */
+
+.page-navigation {
+  padding-top: 44px;
+  padding-left: 60px;
+  padding-bottom: 45px;
+}
+
+.page-heading {
+  font-family: "Gilroy Extrabold", sans-serif;
+  font-size: 47px;
+  line-height: 58px;
+  color: #000000;
+  margin: 0;
+}
+
+.page-nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.page-nav-item:not(:last-child) {
+  margin-right: 40px;
+  position: relative;
+}
+
+.page-nav-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -22px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid black;
+  transform: rotate(-45deg);
+  border-top: none;
+  border-left: none;
+}
+
+.page-nav-item a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-nav-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.page-nav-item a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.sorting-cols {
+  background-image: linear-gradient(
+    to right,
+    #dcdcdc 0,
+    #dcdcdc 33%,
+    #ebebeb 33%,
+    #ebebeb 100%
+  );
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.filters-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr min-content;
+}
+
+.title-col {
+  padding-left: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #dcdcdc;
+}
+
+.filters-title {
+  margin: 0;
+  font-family: "Gilroy Extrabold", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sorting-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 72px;
+}
+
+.sorting-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.sorting-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.sorting-item a {
+  font-family: "Open Sans", sans-serif;
+
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.sorting-item.sorting-item-active a {
+  opacity: 1;
+}
+
+.sorting-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting-btn {
+  border: none;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  background-image: url("./../img/icon-down-dir.png");
+  opacity: 0.2;
+}
+
+.sorting-btn.button-up {
+  transform: rotate(180deg);
+  margin-right: 20px;
+}
+
+.sorting-btn.sorting-btn-active {
+  opacity: 1;
+}
+
+.filters {
+  background-image: linear-gradient(
+    to right,
+    #e5e5e5 0,
+    #e5e5e5 33%,
+    #fff 33%,
+    #fff 100%
+  );
+}
+
+.filter-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.filters-col {
+  padding-top: 70px;
+  padding-left: 60px;
+  padding-bottom: 20px;
+  background-color: #e5e5e5;
+}
+
+hr {
+  width: 200px;
+  height: 2px;
+  background-color: #000;
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-top: 14px;
+}
+
+.form-legend {
+  font-family: "Gilroy Extrabold", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.range-filter {
+  width: 200px;
+  height: 44px;
+  margin-top: 30px;
+  margin-bottom: 38px;
+}
+
+.range-controls {
+  margin-bottom: 17px;
+  position: relative;
+}
+
+.price-controls {
+  display: flex;
+}
+
+.scale {
+  width: 200px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.bar {
+  width: 94px;
+  height: 2px;
+  background-color: #91c92f;
+  position: absolute;
+  left: 0;
+}
+
+.toggle {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #fff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px rgb(0 0 0 / 15%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle.toggle-max {
+  left: 97px;
+}
+
+.range-input {
+  width: 50px;
+}
+
+.range-input[name="min-price"] {
+  margin-right: 17px;
+}
+
+.label-price,
+.range-input {
+  font-family: "Gilroy Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.range-input {
+  border: none;
+  background-color: transparent;
+}
+
+.checkbox-list,
+.radio-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.checkbox-list {
+  margin-bottom: 37px;
+}
+
+.radio-list {
+  margin-bottom: 50px;
+}
+
+.checkbox-item:not(:last-child),
+.radio-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #000000;
+  padding-left: 42px;
+  position: relative;
+  cursor: pointer;
+}
+
+.form-label:hover {
+  opacity: 0.6;
+}
+
+.form-label:active {
+  opacity: 1;
+}
+
+.form-input {
+  display: none;
+}
+
+.checkbox-input + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.checkbox-input:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox-input:disabled + label::before,
+.checkbox-input:disabled + label,
+.checkbox-input:checked:disabled + label::before,
+.radio-input:disabled + label::before,
+.radio-input:disabled + label,
+.radio-input:checked:disabled + label::before {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.radio-input + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.radio-input:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.more-button.show-button {
+  border: none;
+  background: transparent;
+  z-index: 1;
 }

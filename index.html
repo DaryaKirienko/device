@@ -14,6 +14,8 @@
       rel="stylesheet"
     />
     <script src="./script/modal.js" defer></script>
+    <script src="./script/services_menu.js" defer></script>
+    <script src="./script/slider.js" defer></script>
   </head>
   <body>
     <header class="main-header container">
@@ -54,7 +56,7 @@
                     <a href="#"> Виртуальная реальность</a>
                   </li>
                   <li class="catalog-item">
-                    <a href="#">Моноподы для селфи</a>
+                    <a href="./catalog.html">Моноподы для селфи</a>
                   </li>
                   <li class="catalog-item"><a href="#">Экшн-камеры</a></li>
                 </ul>
@@ -80,34 +82,89 @@
         </nav>
       </section>
     </header>
-    <section class="main-slider first-slide container">
-      <div class="slider-image">
-        <img src="./img/slider-1.png" alt="quadcopter" />
-      </div>
-      <div class="slider-information">
-        <h2 class="slider-title">Порхает как бабочка, жалит как пчела!</h2>
-        <p class="slider-description">
-          Этот обычный, на первый взгляд, квадрокоптер оснащен
-          мощным&nbsp;лазером, замаскированным под стандартную камеру.
-        </p>
-        <div class="header-buttons">
-          <a class="more-button" href="#">Подробнее</a>
-          <div class="slider-buttons-group">
-            <button class="slider-button active-button"></button>
-            <button class="slider-button"></button>
-            <button class="slider-button"></button>
-          </div>
+    <section class="slider container">
+      <div class="first-slide main-slider active-slide">
+        <div class="slider-image first-slide-img">
+          <img src="./img/slider-1.png" alt="quadcopter" />
         </div>
-        <ul class="benefits-list">
-          <li class="benefits-item">
-            <strong>800 м</strong>
-            <span>Дальность полета</span>
-          </li>
-          <li class="benefits-item">
-            <strong>50 м</strong>
-            <span>Радиус поражения</span>
-          </li>
-        </ul>
+        <div class="slider-information">
+          <h2 class="slider-title">Порхает как бабочка, жалит как пчела!</h2>
+          <p class="slider-description">
+            Этот обычный, на первый взгляд, квадрокоптер оснащен
+            мощным&nbsp;лазером, замаскированным под стандартную камеру.
+          </p>
+          <div class="header-buttons">
+            <a class="more-button" href="#">Подробнее</a>
+          </div>
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <strong>800 м</strong>
+              <span>Дальность полета</span>
+            </li>
+            <li class="benefits-item">
+              <strong>50 м</strong>
+              <span>Радиус поражения</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="second-slide main-slider">
+        <div class="slider-image">
+          <img src="./img/slider-2.png" alt="quadcopter" />
+        </div>
+        <div class="slider-information">
+          <h2 class="slider-title">
+            Худеем <br />
+            правильно!
+          </h2>
+          <p class="slider-description">
+            Этот обычный, на первый взгляд, квадрокоптер оснащен
+            мощным&nbsp;лазером, замаскированным под стандартную камеру.
+          </p>
+          <div class="header-buttons">
+            <a class="more-button" href="#">Подробнее</a>
+          </div>
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <strong>48 часов</strong>
+              <span>Без подзарядки</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="third-slide main-slider">
+        <div class="slider-image third-slide-img">
+          <img src="./img/slider-3.png" alt="quadcopter" />
+        </div>
+        <div class="slider-information">
+          <h2 class="slider-title">Делай селфи, как&nbsp;Бен&nbsp;Стиллер!</h2>
+          <p class="slider-description">
+            Самая длинная палка для селфи доступна в нашем магазине. Восемь
+            (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+          </p>
+          <div class="header-buttons">
+            <a class="more-button" href="#">Подробнее</a>
+          </div>
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <strong>8,5 м</strong>
+              <span>Длина палки</span>
+            </li>
+            <li class="benefits-item">
+              <strong>5 кг</strong>
+              <span>Вес палки</span>
+            </li>
+            <li class="benefits-item">
+              <strong>Карбон</strong>
+              <span>Материал</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="slider-buttons-group">
+        <button class="slider-button first-slide-btn active-button"></button>
+        <button class="slider-button second-slide-btn"></button>
+        <button class="slider-button third-slide-btn"></button>
       </div>
     </section>
     <main>
@@ -197,56 +254,60 @@
       </section>
       <section class="offers">
         <div class="offers-wrapper container">
-          <div class="offers-slide delivery-offer offer-active">
+          <div class="offers-slide delivery-offer">
             <ul class="offers-list">
               <li class="offers-item offer-delivery offer-active">
                 <a href="#">доставка</a>
               </li>
-              <li class="offers-item offer-guarantee">
+              <li class="offers-item offer-warranty">
                 <a href="#">гарантия</a>
               </li>
               <li class="offers-item offer-credit"><a href="#">кредит</a></li>
             </ul>
-            <div class="offer-description">
-              <h3 class="offers-title">Доставка</h3>
-              <p class="offers-subtitle">
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
-                на ваш этаж.
-              </p>
+
+            <div class="offer-block delivery-block offer-active">
+              <div class="offer-description">
+                <h3 class="offers-title">Доставка</h3>
+                <p class="offers-subtitle">
+                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                  совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
+                  на ваш этаж.
+                </p>
+              </div>
+              <img
+                class="offers-image"
+                src="./img/delivery.svg"
+                alt="delivery"
+              />
             </div>
-            <img class="offers-image" src="./img/delivery.svg" alt="delivery" />
-          </div>
-          <div style="display: none">
-            <ul>
-              <li>доставка</li>
-              <li>гарантия</li>
-              <li>кредит</li>
-            </ul>
-            <div>
-              <h3>Гарантия</h3>
-              <p>
-                Если из-за возгорания купленного у нас товара у вас сгорит дом —
-                не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-              </p>
+
+            <div class="offer-block warranty-block">
+              <div class="offer-description">
+                <h3 class="offers-title">Гарантия</h3>
+                <p class="offers-subtitle">
+                  Если из-за возгорания купленного у нас товара у вас сгорит дом
+                  — не переживайте, мы выдадим вам новый. Товар, не дом, конечно
+                  же.
+                </p>
+              </div>
+              <img
+                class="offers-image"
+                src="./img/warranty.svg"
+                alt="warranty"
+              />
             </div>
-            <img src="./img/warranty.svg" alt="warranty" />
-          </div>
-          <div style="display: none">
-            <ul>
-              <li>доставка</li>
-              <li>гарантия</li>
-              <li>кредит</li>
-            </ul>
-            <div>
-              <h3>Кредит</h3>
-              <p>
-                Залезть в долговую яму стало проще! Кредитные консультанты
-                подберут для вас наиболее выгодные условия кредита. Выгодные для
-                нашего банка, разумеется.
-              </p>
+
+            <div class="offer-block credit-block">
+              <div class="offer-description">
+                <h3 class="offers-title">Кредит</h3>
+                <p class="offers-subtitle">
+                  Залезть в долговую яму стало проще! Кредитные консультанты
+                  подберут для вас наиболее выгодные условия кредита. Выгодные
+                  для нашего банка, разумеется.
+                </p>
+              </div>
+              <img class="offers-image" src="./img/credit.svg" alt="credit" />
             </div>
-            <img src="./img/credit.svg" alt="credit" />
           </div>
         </div>
       </section>

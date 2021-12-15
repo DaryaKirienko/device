@@ -1,0 +1,36 @@
+const openDeliveryBlock = document.querySelector('.offer-delivery')
+const blockDelivery = document.querySelector('.delivery-block')
+const openWarrantyBlock = document.querySelector('.offer-warranty')
+const blockWarranty = document.querySelector('.warranty-block')
+const openCreditBlock = document.querySelector('.offer-credit')
+const blockCredit = document.querySelector('.credit-block')
+
+openDeliveryBlock.addEventListener('click', (evt) => {
+    evt.preventDefault()
+    openDeliveryBlock.classList.add('offer-active')
+    openWarrantyBlock.classList.remove('offer-active')
+    openCreditBlock.classList.remove('offer-active')
+    blockDelivery.classList.add('offer-active')
+    blockWarranty.classList.remove('offer-active')
+    blockCredit.classList.remove('offer-active')
+})
+
+openWarrantyBlock.addEventListener('click', (evt) => {
+    evt.preventDefault()
+    openDeliveryBlock.classList.remove('offer-active')
+    openWarrantyBlock.classList.add('offer-active')
+    openCreditBlock.classList.remove('offer-active')
+    blockDelivery.classList.remove('offer-active')
+    blockWarranty.classList.add('offer-active')
+    blockCredit.classList.remove('offer-active')
+})
+
+openCreditBlock.addEventListener('click', (evt) => {
+    evt.preventDefault()
+    openDeliveryBlock.classList.remove('offer-active')
+    openWarrantyBlock.classList.remove('offer-active')
+    openCreditBlock.classList.add('offer-active')
+    blockDelivery.classList.remove('offer-active')
+    blockWarranty.classList.remove('offer-active')
+    blockCredit.classList.add('offer-active')
+})
